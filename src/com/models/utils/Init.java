@@ -45,10 +45,10 @@ public class Init {
 
         List<Classes> classesList = new ArrayList<>();
 
-        Classes classes1 = new Classes(101, "How to make Orange Juice", "104A", 1020725514, getStudentPerClass1());
-        Classes classes2 = new Classes(102, "How to cut an Apple", "204A", 1020725512, getStudentPerClass2());
-        Classes classes3 = new Classes(103, "How to peel a Mango", "304A", 2020725514, getStudentPerClass3());
-        Classes classes4 = new Classes(104, "How to peel a Banana", "404A", 2020725511, getStudentPerClass4());
+        Classes classes1 = new Classes(101, "How to make Orange Juice", "104A", 1020, getStudentPerClass1());
+        Classes classes2 = new Classes(102, "How to cut an Apple", "204A", 2020, getStudentPerClass2());
+        Classes classes3 = new Classes(103, "How to peel a Mango", "304A", 1023, getStudentPerClass3());
+        Classes classes4 = new Classes(104, "How to peel a Banana", "404A", 2021, getStudentPerClass4());
         
         classesList.add(classes1);
         classesList.add(classes2);

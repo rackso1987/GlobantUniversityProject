@@ -167,20 +167,21 @@ public class GlobantUniversity {
 			do {
 				System.out.println("Please enter the Student ID to include to the New Claas or 0 to Exit.");
 				this.studentId = reader.nextInt();
-				for (int i=0; i < this.getStudentList().size(); i++) {
-					if (this.studentId == this.getStudentList().get(i).getCid()) {
-						control = 1;
-						Student studentNew = new Student (this.getStudentList().get(i).getCid(),this.getStudentList().get(i).getFirtsName(),this.getStudentList().get(i).getLastName(),"29/04/2020");
-						studentsPerClass.add(studentNew);
-					} else {
-						control = 0;
+				control = 0;
+				if (studentId != 0) {
+					for (int i=0; i < this.getStudentList().size(); i++) {
+						if (this.studentId == this.getStudentList().get(i).getCid()) {
+							control = 1;
+							studentsPerClass.add(this.getStudentList().get(i));
+							System.out.println("Student " + this.getStudentList().get(i).getFirtsName() + " " + this.getStudentList().get(i).getLastName() + " was admitted");
+						}
 					}
-				}
 				if (control == 0) {
 					System.out.println("Student does not exist.");
 				}
+				}
 			}while(this.studentId != 0);
-			if (control == 0) {
+			if (studentsPerClass.size() == 0) {
 				System.out.println("You must include at least one estudent to the class. Please try again");
 			} else {
 				classesList.add(new Classes(classId, className, classroom, teacherId, studentsPerClass));
@@ -195,7 +196,7 @@ public class GlobantUniversity {
 				for(int j = 0; j < classesList.get(i).getStudentPerClass().size(); j++) {
 					if(studentId == classesList.get(i).getStudentPerClass().get(j).getCid()) {
 						control = 1;
-						System.out.println("Class ID= " + classesList.get(i).getClassId() + "\tClass Name= " + classesList.get(i).getClassName());
+						System.out.println("Class ID= " + classesList.get(i).getClassId() + "\tClass Name= " + classesList.get(i).getClassName() + "\tClassroom= " + classesList.get(i).getClassroom());
 					}
 				
 				}
@@ -209,7 +210,3 @@ public class GlobantUniversity {
 		}
 	}
 }
-	
-	
-	
-

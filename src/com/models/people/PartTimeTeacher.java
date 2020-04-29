@@ -1,11 +1,5 @@
 package com.models.people;
 
-import java.util.List;
-import com.models.classes.Classes;
-import com.models.university.GlobantUniversity;
-import static com.models.utils.Init.*;
-
-
 public class PartTimeTeacher extends Teacher {
 	
     private int classHour;
