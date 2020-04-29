@@ -1,0 +1,4 @@
+Sistemas,2,1020,Oscar,Diaz,11/07/2018
+Derecho,3,1021,Doctor,Goku,11/11/2017
+Psicologia,1,1022,Lastenia,Rojas,11/12/2019
+Medicina,5,1023,Pepito,Perez,11/11/2015
